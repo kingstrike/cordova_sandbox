@@ -1,0 +1,172 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+	
+	<meta charset="utf-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1"/>
+	<title>jQuery Mobile</title>
+	
+	<link rel="stylesheet" href="jquery.mobile/jquery.mobile-1.4.5.min.css"/>
+	<script src="jquery.mobile/jquery-1.11.1.min.js"></script>
+	<script src="jquery.mobile/jquery.mobile-1.4.5.min.js"></script>
+	<script src="cordova.js"></script>	
+
+<style>
+   li { list-style:none; }
+  .picture { list-style:none; padding:0; margin:0; }
+  .picture li { float:left; width:50%;}
+  .picture li a {display:block; margin:5px; border: 1px }
+  .picture li img { display:block; width:50%;  height:auto;}
+  .picture li img:hover { display:block; width:100%;  height:auto;} 
+
+  table {
+            border-collapse: collapse;
+            border-spacing: 0;
+        }
+
+        table tr th {
+            border: solid 1px #aaa999;
+        }
+
+        table tr td {
+            border: solid 1px #aaa999;
+        }
+</style>
+</head>
+
+<body>
+<div data-theme="yellow">
+	<div data-role="page" id="home">
+		<div data-role="header" data-theme="yellow">
+			<h1>샌드박스 네트워크 소개 앱</h1>
+		</div>
+		<div data-role="content" style="text-align:center">
+				<img src="img/333.png" >
+			<ul data-role="listview" data-inset="true">
+				<li><a href="#intro">샌드박스 소개</a></li>
+				<li><a href="#movie" data-rel="dialog">샌드박스 소속 크리에이터</a></li>
+				<li><a href="#wizard3-1" data-rel="dialog">샌드박스 게이밍</a></li>
+				<li><a href="#gallery">샌드박스 로고 사진</a></li>
+			</ul>
+		</div>
+		<div data-role="footer" data-position="fixed" data-theme="b">
+			<h1>샌드박스 네트워크</h1>
+		</div>
+	</div>
+	
+	<div data-role="page" id="intro" data-theme="b">
+		<div data-role="header" data-theme="b">
+			<a href="#home" data-icon="arrow-l" data-direction="reverse">처음</a>			
+			<h1>샌드박스 네트워크 소개</h1>
+		</div>
+		<div data-role="content">
+				<div  style="text-align:center">
+					<img src="img/333.png">
+				</div>			
+			<div data-role="collapsible-set" data-theme="b" data-content-theme="e">
+				<div data-role="collapsible" data-collapsed="false">
+					<h3>샌드박스 비전</h3>
+					<p>크리에이터들의 상상력으로 세상 모두를 즐겁게!</p>
+				</div>
+				<div data-role="collapsible">
+					<h3>사명감</h3>
+					<p>창의적인 크리에이터들과 디지털 네이티브
+						(Digital native)들이 마음껏 뛰어 놀 수
+						있는 놀이터이자 크리에이터가 중심이 되는
+						튼튼한 창작 네트워크 제공</p>
+				</div>
+				<div data-role="collapsible" >
+					<h3>가치</h3>
+					<p>크리에이터들에 대한 사랑
+						창의력과 상상력에 대한 존중
+						시청자 취향에 대한 존중</p>
+				</div>
+			</div>
+		</div>
+		<div data-role="footer" data-position="fixed" data-theme="b">
+			<h1>샌드박스 네트워크</h1>
+		</div>		
+	</div>
+	
+	<div data-role="page" id="movie" data-theme="b">
+		<div data-role="header" data-position="fixed" data-theme="b">
+			<h1>크리에이터 소개</h1>
+		</div>
+		<div data-role="content" >
+			<div class="ui-bar ui-bar-e">샌드박스의 크리에이터</div><br/>
+			
+			<table>
+				<tr>
+					<th>No.</th>
+					<th>유튜브 프로필 사진</th>
+					<th>구독자</th>
+					<th>장르</th>
+				</tr>
+				<tr>
+					<td align="center">1</td>
+					<td><center><img src="img/김블루.png" width="100" height="100"></center></td>
+					<td align="center">173만</td>
+					<td align="center">종합게임</td>
+				</tr>
+				<tr>
+					<td align="center">2</td>
+					<td><center><img src="img/형독.jpg" width="100	" height="100"></center></td>
+					<td align="center">59만</td>
+					<td align="center">카트라이더,몬스트럼 및 각종 레이싱 게임</td>
+				</tr>
+				<tr>
+					<td align="center">3</td>
+					<td><center><img src="img/악녀.png" width="100	" height="100"></center></td>
+					<td align="center">47만</td>
+					<td align="center">소통방송</td>
+				</tr>
+				<tr>
+					<td align="center">4</td>
+					<td align="center"><center><img src="img/연다.jpeg	" width="100	" height="100"></center></td>
+					<td align="center">85만</td>
+					<td align="center">배틀그라운드</td>
+				</tr>
+			</table>
+		</div>
+		<div data-role="footer" data-theme="b">
+		</div>
+	</div>
+	
+	<div data-role="page" id="wizard3-1"  data-theme="b">
+		<div data-role="header" data-position="fixed"  data-theme="b">
+			<a href="#home" data-icon="arrow-l" data-direction="reverse">처음</a>
+			<h1>샌드박스 게이밍</h1>
+		</div>
+		<div data-role="content">
+            <ul class="picture">
+				<li><img src="img/리브샌박 엣날로고.png"/></li>	
+				<li><img src="img/리브샌박 최신로고.png"/></li>	
+				<li><img src="img/샌드박스게이밍카트라이더.jpg"/></li>	
+				<li><img src="img/샌박 롤.jpg"/></li>	
+
+            </ul>
+		</div>
+
+	</div>
+
+	<div data-role="page" id="gallery"  data-theme="b">
+		<div data-role="header" data-position="fixed"  data-theme="b">
+			<a href="#home" data-icon="arrow-l" data-direction="reverse">처음</a>
+			<h1>샌드박스 로고 사진</h1>
+		</div>
+		<div data-role="content">
+            <ul class="picture">
+				<li><img src="img/새앤박.png"/></li>	
+				<li><img src="img/샌박로고4.png"/></li>	
+				<li><img src="img/샌박로고2.png"/></li>	
+				<li><img src="img/sanbox.png"/></li>	
+
+            </ul>
+		</div>
+		<div data-role="footer" data-position="fixed" data-theme="b">
+			<h1>샌드박스 네트워크</h1>
+		</div>		
+	</div>
+</div>	
+</body>
+</html>
